@@ -1,3 +1,7 @@
+.popMainDiv {
+  background: linear-gradient(to bottom, #16181e, #000000);
+}
+
 .borderClip {
   clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%);
 }

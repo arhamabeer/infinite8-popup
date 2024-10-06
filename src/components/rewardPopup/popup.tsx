@@ -21,7 +21,9 @@ const rewards: Rewards[] = [
 ];
 function RewardPopup() {
   return (
-    <div className="border-2 border-[#423520] rounded-xl p-14 relative w-[50%]">
+    <div
+      className={`border-2 border-[#423520] rounded-xl p-10 relative w-[50%] ${style.popMainDiv}`}
+    >
       <div className="absolute right-4 top-4 border-white rounded-md border p-2">
         <ImCross size={12} />
       </div>
@@ -38,17 +40,27 @@ function RewardPopup() {
           mission and bigger rewards!
         </p>
       </div>
-      <svg width="300" height="50">
-        <path
-          d="M10 25 H200 Q220 25 225 40 T330 45 H470"
-          stroke="white"
-          strokeWidth="2"
-          fill="transparent"
-        />
-      </svg>
-      <h5 className="text-center text-[#fff] font-normal text-xl my-2">
-        Rewards
-      </h5>
+      <div className="flex justify-center items-baseline">
+        <svg width="300" height="50">
+          <path
+            d="M10 32 H220 Q230 40 300 200 T232 50 H470"
+            stroke="white"
+            strokeWidth="2"
+            fill="transparent"
+          />
+        </svg>
+        <h5 className="text-center text-[#fff] font-normal text-xl my-2 mx-4">
+          Rewards
+        </h5>
+        <svg width="300" height="50">
+          <path
+            d="M2 45 L30 45 H70 Q80 30 80 30 T80 30 H470"
+            stroke="white"
+            stroke-width="2"
+            fill="transparent"
+          />
+        </svg>
+      </div>
       <div className="flex justify-center items-center ">
         {rewards.map((reward: Rewards, _ind: Key) => (
           <div
